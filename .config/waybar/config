@@ -1,0 +1,156 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+  "height": 34,
+  "modules-left": [
+    "clock",
+    "cpu",
+    "mpris"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "tray",
+    "network",
+    "bluetooth",
+    "custom/layout",
+    "wireplumber"
+  ],
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "format": "{icon}",
+    "format-icons": {
+      "default": "X",
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "active": "cvrsxd",
+      "urgent": "wxrn"
+    },
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": []
+    }
+  },
+  "memory": {
+    "interval": 5,
+    "format": "󰍛 {}%",
+    "max-length": 10
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "clock": {
+    "tooltip-format": "{calendar}",
+    "format-alt": "  {:%a, %d %b %Y}",
+    "format": "  {:%H:%M}"
+  },
+  "network": {
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯","󰤟","󰤢","󰤥","󰤨"],
+    "format-ethernet": "󰀂",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{icon} {essid}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-ethernet": "󰀂  {ifname}\n⇣{bandwidthDownBytes}  ⇡{bandwidthUpBytes}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "nmgui",
+    "interval": 5,
+    "nospacing": 1
+  },
+  "wireplumber": {
+    "format": "{icon}",
+    "format-bluetooth": "󰂰",
+    "nospacing": 1,
+    "tooltip-format": "Volume : {volume}%",
+    "format-muted": "󰝟",
+    "format-icons": {
+      "headphone": "",
+      "default": ["󰖀","󰕾",""]
+    },
+    "on-click": "pavucontrol &",
+    "scroll-step": 1
+  },
+  "battery": {
+    "format": "{capacity}% {icon}",
+    "format-icons": {
+      "charging": [
+        "󰢜",
+        "󰂆",
+        "󰂇",
+        "󰂈",
+        "󰢝",
+        "󰂉",
+        "󰢞",
+        "󰂊",
+        "󰂋",
+        "󰂅"
+      ],
+      "default": [
+        "󰁺",
+        "󰁻",
+        "󰁼",
+        "󰁽",
+        "󰁾",
+        "󰁿",
+        "󰂀",
+        "󰂁",
+        "󰂂",
+        "󰁹"
+      ]
+    },
+    "format-full": "Charged ",
+    "interval": 5,
+    "states": {
+      "warning": 20,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+  "custom/power": {
+    "format": "󰤆",
+    "tooltip": false,
+    "on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh &"
+  },
+  "bluetooth": {
+    "format-icons": {
+      "connected": "󰂰",
+      "on": "󰂲",
+      "off": "󰂱"
+    },
+    "format": "{icon} - {device_battery_percentage}%",
+    "tooltip-format-enumerate-connected-battery": "{device_alias} - {device_battery_percentage}%",
+    "tooltip-format": "{device_enumerate}",
+    "interval": 10,
+    "on-click": "blueman-manager &",
+    "nospacing": 1
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "  {usage}%",
+    "tooltip": false
+  },
+  "custom/layout": {
+    "exec": "~/.config/waybar/scripts/layout.sh",
+    "interval": 1,
+    "format": "{}"
+},
+"mpris": {
+  "player": "spotify",
+  "format": "plyd - '{title}' от {artist}",
+  "format-paused": "psed - '{title}' от {artist}",
+  "format-stopped": "■ Stopped",
+  "max-length": 40,
+  "interval": 1
+}
+}
