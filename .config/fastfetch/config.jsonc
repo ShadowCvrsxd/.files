@@ -78,7 +78,8 @@
       "keyColor": "bright_green"
     },
     {
-      "type": "gpu",
+      "type": "custom",
+      "format": "Intel(R) HD3000",
       "key": "  󱤓",
       "keyColor": "red"
     },
