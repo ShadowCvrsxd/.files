@@ -1,4 +1,4 @@
-🌌 Kiana Hyprland Config
+🌌 Hyprland Config
 Custom automated setup optimized for low-end hardware (Dell Latitude 2011).
 
 🔥 The Main Feature
