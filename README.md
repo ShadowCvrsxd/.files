@@ -12,15 +12,6 @@ Brave Browser (Start page)
 
 Terminal & GTK
 
-🛠️ How to use
-Clone the repo:
-
-Bash
-git clone https://github.com/ShadowCvrsxd/.files.git
-Run the switcher:
-
-Bash
-./scripts/color-switcher.sh
 💻 Tech Stack
 OS: CachyOS / Arch
 
